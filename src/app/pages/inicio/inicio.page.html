@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registrapp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Registrapp</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-button (click)="login()" expand="block" fill="solid" shape="round" color="success" routerLink="/login">
+    Login
+  </ion-button>
+  <ion-button (click)="registro()" expand="block" fill="solid" shape="round" color="warning" routerLink="/registro">
+    Registrarse
+  </ion-button>
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"
+      
+      color="primary">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="centrado_android">Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" class="centrado_ios">Registro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-button (click)="login()" expand="block" fill="solid" shape="round" color="tertiary" routerLink="/login">
+    Login
+  </ion-button>
+</ion-content>
