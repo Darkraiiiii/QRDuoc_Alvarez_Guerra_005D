@@ -7,12 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
+  usuario = {
+    correo: "",
+    contra: "",
+  }
+
   constructor() { }
 
   ngOnInit() {
   }
+  async MostrarMensaje() {
+
+  }
 
   async hub() {
 
+  }
+
+  Enviar() {
+    console.log("Enviado");
+    this.MostrarMensaje();
+    this.usuario.correo = "";
+    this.usuario.contra = "";
   }
 }

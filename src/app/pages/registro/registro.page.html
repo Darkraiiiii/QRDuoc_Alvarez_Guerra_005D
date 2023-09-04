@@ -16,6 +16,39 @@
       <ion-title size="large" class="centrado_ios">Registro</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Ingrese sus datos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form>
+        <ion-list>
+          <ion-item>
+            <ion-label></ion-label>
+            <ion-input type="text" placeholder="Nombre" [(ngModel)]="usuario.nombre" name="nombre">
+            </ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label></ion-label>
+            <ion-input type="text" placeholder="Apellido" [(ngModel)]="usuario.apellido" name="apellido">
+            </ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label></ion-label>
+              <ion-input type="text" placeholder="Correo" [(ngModel)]="usuario.correo" name="correo">
+              </ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label></ion-label>
+                <ion-input type="password" placeholder="Contraseña" [(ngModel)]="usuario.contra" name="contraseña">
+                </ion-input>
+              </ion-item>
+        </ion-list>
+      </form>
+    </ion-card-content>
+  </ion-card>
   <ion-button (click)="login()" expand="block" fill="solid" shape="round" color="tertiary" routerLink="/login">
     Login
   </ion-button>
