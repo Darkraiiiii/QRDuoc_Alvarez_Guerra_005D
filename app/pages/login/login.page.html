@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"
+      
+      color="primary">
+      </ion-back-button>
+    </ion-buttons >
+    <ion-title class="centrado_android">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" class="centrado_ios">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Ingrese sus datos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form>
+        <ion-list>
+          <ion-item>
+            <ion-label></ion-label>
+            <ion-input type="text" placeholder="Correo" [(ngModel)]="usuario.correo" name="correo"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label></ion-label>
+            <ion-input type="password" placeholder="Contraseña" [(ngModel)]="usuario.contra" name="Contraseña"></ion-input>
+          </ion-item>
+        </ion-list>
+      </form>
+    </ion-card-content>
+  </ion-card>
+  <ion-button (click)="hub()" expand="block" fill="solid" shape="round" color="tertiary" routerLink="/hub">
+    Entrar
+  </ion-button>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
