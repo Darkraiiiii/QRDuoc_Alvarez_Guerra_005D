@@ -5,7 +5,7 @@
       
       color="primary">
       </ion-back-button>
-    </ion-buttons>
+    </ion-buttons >
     <ion-title class="centrado_android">Login</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -27,7 +27,6 @@
             <ion-label></ion-label>
             <ion-input type="text" placeholder="Correo" [(ngModel)]="usuario.correo" name="correo"></ion-input>
           </ion-item>
-
           <ion-item>
             <ion-label></ion-label>
             <ion-input type="password" placeholder="Contraseña" [(ngModel)]="usuario.contra" name="Contraseña"></ion-input>
@@ -39,4 +38,10 @@
   <ion-button (click)="hub()" expand="block" fill="solid" shape="round" color="tertiary" routerLink="/hub">
     Entrar
   </ion-button>
+
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
