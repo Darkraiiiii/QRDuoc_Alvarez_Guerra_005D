@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 interface Componente {
   icon: string;
@@ -42,13 +43,9 @@ export class AppComponent {
       icon: 'document',
       name: 'Justificativo',
       redirecTo: '/justificativo'
-    },
-    {
-      icon: 'exit',
-      name: 'Cerrar Sesión',
-      redirecTo: '/inicio'
     }
   ]
 
   constructor() { }
+
 }

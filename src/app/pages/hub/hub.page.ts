@@ -18,9 +18,10 @@ export class HubPage implements OnInit {
   MostrarMenu() {
     this.menuController.open('first');
   }
+
   logout() {
+    this.router.navigateByUrl('/inicio')
     return sessionStorage.removeItem('usuario')
     return sessionStorage.removeItem('isactive')
-    this.router.navigateByUrl('/login')
   }
 }
