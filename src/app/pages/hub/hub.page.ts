@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 
 @Component({
@@ -8,12 +9,18 @@ import { MenuController } from '@ionic/angular';
 })
 export class HubPage implements OnInit {
 
-  constructor(private menuController: MenuController) { }
+  constructor(private menuController: MenuController,
+    private router: Router) { }
 
   ngOnInit() {
   }
 
   MostrarMenu() {
     this.menuController.open('first');
+  }
+  logout() {
+    return sessionStorage.removeItem('usuario')
+    return sessionStorage.removeItem('isactive')
+    this.router.navigateByUrl('/login')
   }
 }

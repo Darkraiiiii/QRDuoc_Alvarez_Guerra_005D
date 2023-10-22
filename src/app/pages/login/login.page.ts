@@ -55,8 +55,9 @@ export class LoginPage implements OnInit {
             if (this.usuario.isactive) {
               sessionStorage.setItem('usuario', this.usuario.usuario);
               sessionStorage.setItem('role', this.usuario.role);
+              sessionStorage.setItem('ingresado', 'true');
               this.showToast('Sesión iniciada');
-              this.router.navigateByUrl("/inicio")
+              this.router.navigateByUrl("/hub")
             }
             else {
               this.UserInactivo();

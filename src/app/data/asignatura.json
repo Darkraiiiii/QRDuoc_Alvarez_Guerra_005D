@@ -30,7 +30,7 @@
             "id": 1,
             "nombre": "Camila",
             "apellido": "Guerra",
-            "usuario": "cam.guerra",
+            "usuario": "camguerra",
             "contraseña": "1572",
             "role": "estudiante",
             "isactive": true
@@ -39,8 +39,8 @@
             "id": 2,
             "nombre": "Fabrizzio",
             "apellido": "Alvarez",
-            "usuario": "fabr.alvarez",
-            "contraseña": "duoc1234",
+            "usuario": "fabralvarez",
+            "contraseña": "1704",
             "role": "estudiante",
             "isactive": true
         }
