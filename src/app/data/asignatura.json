@@ -1,0 +1,48 @@
+{
+    "asignaturas": [
+        {
+            "id": 1,
+            "nombre": "Programación de base de datos",
+            "anio": "segundo",
+            "periodo": "tercer semestre"
+        },
+        {
+            "id": 2,
+            "nombre": "Programación de aplicaciones moviles",
+            "anio": "segundo",
+            "periodo": "cuarto semestre"
+        },
+        {
+            "id": 3,
+            "nombre": "Arquitectura de software",
+            "anio": "segundo",
+            "periodo": "cuarto semestre"
+        },
+        {
+            "id": 4,
+            "nombre": "Calidad de software",
+            "anio": "tercero",
+            "periodo": "quinto semestre"
+        }
+    ],
+    "usuarios": [
+        {
+            "id": 1,
+            "nombre": "Camila",
+            "apellido": "Guerra",
+            "usuario": "cam.guerra",
+            "contraseña": "1572",
+            "role": "estudiante",
+            "isactive": true
+        },
+        {
+            "id": 2,
+            "nombre": "Fabrizzio",
+            "apellido": "Alvarez",
+            "usuario": "fabr.alvarez",
+            "contraseña": "duoc1234",
+            "role": "estudiante",
+            "isactive": true
+        }
+    ]
+}

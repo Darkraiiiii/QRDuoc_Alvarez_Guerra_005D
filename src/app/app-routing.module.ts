@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import { AutorizadoGuard } from './guards/autorizacion.guard';
 const routes: Routes = [
   {
     path: '',
@@ -18,26 +18,32 @@ const routes: Routes = [
   {
     path: 'inicio',
     loadChildren: () => import('./pages/inicio/inicio.module').then(m => m.InicioPageModule)
+
   },
   {
     path: 'hub',
-    loadChildren: () => import('./pages/hub/hub.module').then(m => m.HubPageModule)
+    loadChildren: () => import('./pages/hub/hub.module').then(m => m.HubPageModule),
+    canActivate: [AutorizadoGuard]
   },
   {
     path: 'qr',
-    loadChildren: () => import('./pages/qr/qr.module').then( m => m.QrPageModule)
+    loadChildren: () => import('./pages/qr/qr.module').then(m => m.QrPageModule),
+    canActivate: [AutorizadoGuard]
   },
   {
     path: 'asistencia',
-    loadChildren: () => import('./pages/asistencia/asistencia.module').then( m => m.AsistenciaPageModule)
+    loadChildren: () => import('./pages/asistencia/asistencia.module').then(m => m.AsistenciaPageModule),
+    canActivate: [AutorizadoGuard]
   },
   {
     path: 'justificativo',
-    loadChildren: () => import('./pages/justificativo/justificativo.module').then( m => m.JustificativoPageModule)
+    loadChildren: () => import('./pages/justificativo/justificativo.module').then(m => m.JustificativoPageModule),
+    canActivate: [AutorizadoGuard]
   },
   {
     path: 'perfil',
-    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+    loadChildren: () => import('./pages/perfil/perfil.module').then(m => m.PerfilPageModule),
+    canActivate: [AutorizadoGuard]
   },
 ];
 
