@@ -1,6 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>login</ion-title>
+    <ion-toolbar>
+      <ion-buttons slot="start" routerLink="/inicio">
+        <ion-back-button default-href="#"></ion-back-button>
+      </ion-buttons>
+    
+    </ion-toolbar>
+    
   </ion-toolbar>
 </ion-header>
 
@@ -43,8 +50,9 @@
     <ion-button (click)="login()" [disabled]="!loginForm.valid" expand="block" color="primary" shape="round">
       Login
     </ion-button>
-
-
+    
+    
+   
   </form>
 
 </ion-content>
