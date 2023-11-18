@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { InicioPage } from './inicio.page';
-
+import { Weather2Service } from 'src/app/servicios/weather2.service';
 describe('InicioPage', () => {
   let component: InicioPage;
   let fixture: ComponentFixture<InicioPage>;

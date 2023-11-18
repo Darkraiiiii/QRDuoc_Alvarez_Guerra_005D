@@ -45,6 +45,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/perfil/perfil.module').then(m => m.PerfilPageModule),
     canActivate: [AutorizadoGuard]
   },
+  {
+    path: 'clima',
+    loadChildren: () => import('./pages/clima/clima.module').then( m => m.ClimaPageModule)
+  },
 ];
 
 @NgModule({
