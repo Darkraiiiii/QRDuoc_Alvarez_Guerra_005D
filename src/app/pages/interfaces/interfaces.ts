@@ -20,14 +20,22 @@ export interface Users {
     role: string;
     isactive: boolean;
 }
-interface WeatherApiResponse {
+export interface RespuestaEncabezados {
+    status: String;
+    totalResults: number;
+    articles: Article[];
+}
+export interface Article {
+    source: Source;
+    author: String;
+    title: String;
+    descripcion: string;
+    url: string;
+    urlToImage: string;
+    publisheAt: string;
+    content?: string;
+}
+export interface Source {
+    id?: string;
     name: string;
-    weather: { description: string }[];
-    main: {
-      temp: number;
-      temp_max: number;
-      temp_min: number;
-    };
-
-  }
-  
+}

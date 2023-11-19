@@ -46,8 +46,8 @@ const routes: Routes = [
     canActivate: [AutorizadoGuard]
   },
   {
-    path: 'clima',
-    loadChildren: () => import('./pages/clima/clima.module').then( m => m.ClimaPageModule)
+    path: 'noticias',
+    loadChildren: () => import('./pages/noticias/noticias.module').then( m => m.NoticiasPageModule)
   },
 ];
 
