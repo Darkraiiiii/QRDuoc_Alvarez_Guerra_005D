@@ -2,7 +2,6 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/inicio"
-      
       color="primary">
       </ion-back-button>
     </ion-buttons>
@@ -16,46 +15,38 @@
       <ion-title size="large" class="centrado_ios">Registro</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-card>
-    <ion-card-header style="background-color: rgba(57, 136, 210, 1);">
-      <ion-card-title>Ingrese sus datos</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <form>
-        <ion-list>
-          <ion-item>
-            <ion-label></ion-label>
-            <ion-input type="text" placeholder="Nombre" [(ngModel)]="usuario.nombre" name="nombre">
-            </ion-input>
-          </ion-item>
+  <form [formGroup]="registroForm">
 
-          <ion-item>
-            <ion-label></ion-label>
-            <ion-input type="text" placeholder="Apellido" [(ngModel)]="usuario.apellido" name="apellido">
-            </ion-input>
-            </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nombre:</ion-label>
+      <ion-input type="text" placeholder="Nombre Completo" formControlName="nombre"></ion-input>
+    </ion-item>
 
-            <ion-item>
-              <ion-label></ion-label>
-              <ion-input type="text" placeholder="Correo" [(ngModel)]="usuario.correo" name="correo">
-              </ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label></ion-label>
-                <ion-input type="password" placeholder="Contraseña" [(ngModel)]="usuario.contra" name="contraseña">
-                </ion-input>
-              </ion-item>
-        </ion-list>
-      </form>
-    </ion-card-content>
-  </ion-card>
-  <ion-button (click)="login()" expand="block" fill="solid" shape="round" color="tertiary" routerLink="/login">
-    Login
-  </ion-button>
+    <ion-item>
+      <ion-label position="floating">Apellido:</ion-label>
+      <ion-input type="text" placeholder="Apellido completo" formControlName="apellido"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Usario:</ion-label>
+    <ion-input type="text" placeholder="3 primeras letras del nombre y apellido completo" formControlName="usuario"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña:</ion-label>
+      <ion-input type="password" placeholder="" formControlName="contra"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Rol:</ion-label>
+        <ion-select formControlName="rol">
+          <ion-select-option value="estudiante">Estudiante</ion-select-option>
+          <ion-select-option value="profesor">Profesor</ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-button (click)="registrar()" expand="block" fill="solid" shape="round">
+      Registrar Usuario
+    </ion-button>
+  </form>
 </ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Footer</ion-title>
-  </ion-toolbar>
-</ion-footer>

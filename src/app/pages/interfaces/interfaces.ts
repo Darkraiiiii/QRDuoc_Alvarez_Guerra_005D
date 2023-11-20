@@ -20,6 +20,16 @@ export interface Users {
     role: string;
     isactive: boolean;
 }
+
+export interface User{
+    nombre:string;
+    apellido:string;
+    usuario:string;
+    contraseña:string;
+    role:string;
+    isactive:boolean;
+}
+
 export interface RespuestaEncabezados {
     status: String;
     totalResults: number;

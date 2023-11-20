@@ -111,4 +111,13 @@ export class LoginPage implements OnInit {
     alerta.present();
     return;
   }
+  
+  async mostrarAlertaBienvenida(nombre:string){
+    const alert = await this.alertcontroller.create({
+      header:'weas',
+      message:"Bienvenido, ${nombre}",
+      buttons:['aceptar']
+    });
+    await alert.present();
+  }
 }

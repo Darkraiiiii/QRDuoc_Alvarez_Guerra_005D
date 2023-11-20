@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-hub',
@@ -8,9 +9,13 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['./hub.page.scss'],
 })
 export class HubPage implements OnInit {
+nombre:any;
 
   constructor(private menuController: MenuController,
-    private router: Router) { }
+              private router: Router,
+              private alertController: AlertController,) {
+                this.nombre= sessionStorage.getItem('usuario');
+              }
 
   ngOnInit() {
   }
@@ -19,8 +24,10 @@ export class HubPage implements OnInit {
     this.menuController.open('first');
   }
   logout() {
-    return sessionStorage.removeItem('usuario')
-    return sessionStorage.removeItem('isactive')
-    this.router.navigateByUrl('/login')
+    sessionStorage.removeItem('usuario')
+    sessionStorage.removeItem('role')
+    this.router.navigate(['login'])
   }
+
 }
+

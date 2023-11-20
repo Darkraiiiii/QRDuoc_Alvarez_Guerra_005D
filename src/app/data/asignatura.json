@@ -1,48 +1,75 @@
 {
-    "asignaturas": [
-        {
-            "id": 1,
-            "nombre": "Programación de base de datos",
-            "anio": "segundo",
-            "periodo": "tercer semestre"
-        },
-        {
-            "id": 2,
-            "nombre": "Programación de aplicaciones moviles",
-            "anio": "segundo",
-            "periodo": "cuarto semestre"
-        },
-        {
-            "id": 3,
-            "nombre": "Arquitectura de software",
-            "anio": "segundo",
-            "periodo": "cuarto semestre"
-        },
-        {
-            "id": 4,
-            "nombre": "Calidad de software",
-            "anio": "tercero",
-            "periodo": "quinto semestre"
-        }
-    ],
-    "usuarios": [
-        {
-            "id": 1,
-            "nombre": "Camila",
-            "apellido": "Guerra",
-            "usuario": "camguerra",
-            "contraseña": "1572",
-            "role": "estudiante",
-            "isactive": true
-        },
-        {
-            "id": 2,
-            "nombre": "Fabrizzio",
-            "apellido": "Alvarez",
-            "usuario": "fabralvarez",
-            "contraseña": "1704",
-            "role": "estudiante",
-            "isactive": true
-        }
-    ]
+  "asignaturas": [
+    {
+      "id": 1,
+      "nombre": "Programación de base de datos",
+      "anio": "segundo",
+      "periodo": "tercer semestre"
+    },
+    {
+      "id": 2,
+      "nombre": "Programación de aplicaciones moviles",
+      "anio": "segundo",
+      "periodo": "cuarto semestre"
+    },
+    {
+      "id": 3,
+      "nombre": "Arquitectura de software",
+      "anio": "segundo",
+      "periodo": "cuarto semestre"
+    },
+    {
+      "id": 4,
+      "nombre": "Calidad de software",
+      "anio": "tercero",
+      "periodo": "quinto semestre"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Camila",
+      "apellido": "Guerra",
+      "usuario": "camguerra",
+      "contraseña": "1572",
+      "role": "estudiante",
+      "isactive": true
+    },
+    {
+      "id": 2,
+      "nombre": "Fabrizzio",
+      "apellido": "Alvarez",
+      "usuario": "fabralvarez",
+      "contraseña": "1704",
+      "role": "estudiante",
+      "isactive": true
+    },
+    {
+      "nombre": "Mario",
+      "apellido": "Contreras",
+      "usuario": "marcontreras",
+      "contraseña": "1234",
+      "role": "estudiante",
+      "isactive": true,
+      "id": 3
+    },
+    {
+      "nombre": "Amaro",
+      "apellido": "Bueno",
+      "usuario": "amabueno",
+      "contraseña": "123654",
+      "role": "estudiante",
+      "isactive": true,
+      "id": 4
+    },
+    {
+      "nombre": "Kevin",
+      "apellido": "Campillay",
+      "usuario": "kevcampillay",
+      "contraseña": "147852",
+      "role": "estudiante",
+      "isactive": true,
+      "id": 5
+    }
+  ]
 }

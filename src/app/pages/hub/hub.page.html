@@ -12,6 +12,9 @@
 <ion-content [fullscreen]="true">
   <ion-card-content>
     <img src="assets/saludo.png" alt="">
+    
+    <p style="text-align: center; color:palegreen; font-weight: bold; font-size: 15px;">Bienvenido {{nombre}}</p>
+    
     <ion-card style="background-color: rgb(255, 255, 255);">
       Selecciona tu Asignatura para registrar tu asistencia
     </ion-card>
@@ -33,13 +36,11 @@
       </ion-item>
       <ion-button (click)="logout()" expand="block" fill="solid" shape="round">
         logout
-      </ion-button>
+      </ion-button> 
     </ion-list>
   </ion-card-content>
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Menú</ion-title>
-    </ion-toolbar>
+    
   </ion-header>
 </ion-content>
 

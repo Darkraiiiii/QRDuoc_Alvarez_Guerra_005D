@@ -48,11 +48,6 @@ export class AppComponent {
       name: 'Noticias',
       redirecTo: '/noticias'
     },
-    {
-      icon: 'exit',
-      name: 'Cerrar Sesión',
-      redirecTo: '/inicio'
-    }
   ]
 
   constructor() { }
