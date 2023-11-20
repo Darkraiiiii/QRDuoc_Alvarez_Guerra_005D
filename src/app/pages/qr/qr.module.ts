@@ -1,12 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
 import { QrPageRoutingModule } from './qr-routing.module';
-
 import { QrPage } from './qr.page';
+
 
 @NgModule({
   imports: [
@@ -15,6 +13,7 @@ import { QrPage } from './qr.page';
     IonicModule,
     QrPageRoutingModule
   ],
-  declarations: [QrPage]
+  declarations: [QrPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class QrPageModule {}
