@@ -19,7 +19,9 @@ export class RegistroPage implements OnInit {
     nombre: '',
     apellido: '',
     usuario: '',
-    contraseña: '',
+    password: '',
+    asignatura1:'',
+    asignatura2:'',
     role:'',
     isactive:false
   }
@@ -32,7 +34,9 @@ export class RegistroPage implements OnInit {
                   'apellido': new FormControl("", [Validators.required]),
                   'usuario': new FormControl ("", [Validators.required, Validators.minLength(3)]),
                   'contra': new FormControl("",[Validators.required, Validators.minLength(4)]),
-                  'rol':new FormControl("",Validators.required)
+                  'role':new FormControl("",Validators.required),
+                  'asig1': new FormControl(''),
+                  'asig2': new FormControl(''),  
                 })
                }
 
@@ -40,16 +44,32 @@ export class RegistroPage implements OnInit {
   }
 
 registrar(){
-  this.usuario.nombre=this.registroForm.value.nombre;
-  this.usuario.apellido=this.registroForm.value.apellido;
-  this.usuario.usuario=this.registroForm.value.usuario;
-  this.usuario.contraseña=this.registroForm.value.contra;
-  this.usuario.role=this.registroForm.value.rol;
-  this.usuario.isactive=true;
 
-  this.apicrud.CrearUsuario(this.usuario).subscribe();
-  
-  this.router.navigate(['inicio'])
-  
+  if (this.registroForm && this.registroForm.get('role')){
+      {
+        this.usuario.nombre = this.registroForm.value.nombre;
+        this.usuario.apellido = this.registroForm.value.apellido;
+        this.usuario.password = this.registroForm.value.contra;
+        this.usuario.usuario = this.registroForm.value.usuario;
+        this.usuario.role = this.registroForm.value.role;
+        this.usuario.asignatura1 = this.registroForm.value.asig1;
+        this.usuario.asignatura2 = this.registroForm.value.asig2;
+        this.usuario.isactive=true;
+        this.apicrud.CrearUsuario(this.usuario).subscribe();
+        this.mostrarMensaje();
+        this.registroForm.reset();
+        this.router.navigate(['inicio'])
+      }
+  }
 }
+
+async mostrarMensaje(){
+  const alerta = await this.alertcontroller.create({ 
+    header: 'Nuevo usuario creado',
+    message: 'Bienvenido! '+ this.usuario.nombre ,
+    buttons: ['Ok']
+  });
+  alerta.present();
+}
+
 }

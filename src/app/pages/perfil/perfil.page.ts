@@ -8,13 +8,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./perfil.page.scss'],
 })
 export class PerfilPage implements OnInit {
-
+  
+  numero : any;
+  
   usuario={
     id:0,
     nombre:'',
     apellido:'',
     usuario:'',
     contraseña:'',
+    asignatura1:'',
+    asignatura2:'',
     role:'',
     isactive:false
   }
@@ -30,7 +34,9 @@ export class PerfilPage implements OnInit {
   }
 
   ionViewWillEnter(){
-    this.getUsuariById(this.getIdFromUrl());
+    this.GetUserById(this.getIdFromUrl());
+    this.numero = sessionStorage.getItem('id');
+    const usuarioID = this.getIdFromUrl();
   }
 
   getIdFromUrl(){
@@ -40,7 +46,7 @@ export class PerfilPage implements OnInit {
     return id;
   }
 
-  getUsuariById(usuarioID:number){
+  GetUserById(usuarioID:number){
     this.authservice.BuscarUsuarioId(usuarioID).subscribe(
       (resp:any)=>{
         this.usuario={
@@ -49,9 +55,13 @@ export class PerfilPage implements OnInit {
           apellido:resp[0].apellido,
           usuario:resp[0].usuario,
           contraseña:resp[0].contraseña,
+          asignatura1:resp[0].asignatura1,
+          asignatura2:resp[0].asignatura2,
           role:resp[0].role,
           isactive:resp[0].isactive
         }
+        console.log('Usuario:', this.usuario);
+        
       }
     )
   }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
-import { NoticiasService } from 'src/app/servicio/noticias.service';
+import { NoticiasService } from '../../servicio/noticias.service';
 import { Article } from '../interfaces/interfaces';
 
 @Component({
@@ -9,16 +9,19 @@ import { Article } from '../interfaces/interfaces';
   styleUrls: ['./noticias.page.scss'],
 })
 export class NoticiasPage implements OnInit {
-  noticias: Article[] =[];
+  
+  articulos :Article[]=[];
 
-  constructor(private menuController: MenuController, private noticiasService : NoticiasService) { }
+  constructor(private menuController: MenuController, 
+              private noticiasservice: NoticiasService) { }
 
   ngOnInit() {
-    this.noticiasService.getEncabezados().subscribe( resp => {
-      console.log('noticias', resp);
-      this.noticias.push(...resp.articles);
-    })
+    this.noticiasservice.getTopHeadLines().subscribe(resp =>{
+      console.log(resp);
+      this.articulos.push(...resp.articles);
+      })
   }
+  
   mostrarMenu(){
     this.menuController.open('first');
   }

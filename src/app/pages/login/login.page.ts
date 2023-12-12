@@ -19,7 +19,7 @@ export class LoginPage implements OnInit {
   usuario = {
     id: 0,
     usuario: "",
-    contraseña: "",
+    password: "",
     role: "",
     isactive: false
 
@@ -32,7 +32,7 @@ export class LoginPage implements OnInit {
     private fbuilder: FormBuilder) {
     this.loginForm = this.fbuilder.group({
       'usuario': new FormControl("", [Validators.required, Validators.minLength(3)]),
-      'contraseña': new FormControl("", [Validators.required, Validators.minLength(3)])
+      'password': new FormControl("", [Validators.required, Validators.minLength(3)])
     })
   }
 
@@ -47,14 +47,15 @@ export class LoginPage implements OnInit {
           this.usuario = {
             id: this.userdata[0].id,
             usuario: this.userdata[0].usuario,
-            contraseña: this.userdata[0].contraseña,
+            password: this.userdata[0].password,
             role: this.userdata[0].role,
             isactive: this.userdata[0].isactive
           }
-          if (this.usuario.contraseña === this.loginForm.value.contraseña) {
+          if (this.usuario.password === this.loginForm.value.password) {
             if (this.usuario.isactive) {
               sessionStorage.setItem('usuario', this.usuario.usuario);
               sessionStorage.setItem('role', this.usuario.role);
+              sessionStorage.setItem('id', this.usuario.id.toString());
               sessionStorage.setItem('ingresado', 'true');
               this.showToast('Sesión iniciada');
               this.router.navigateByUrl("/hub")

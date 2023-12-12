@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { RespuestaEncabezados } from '../pages/interfaces/interfaces';
+import { RespuestaToHeadLines } from '../pages/interfaces/interfaces';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class NoticiasService {
 
-  constructor(private httpClient : HttpClient) { }
+  constructor(private httpclient: HttpClient) { }
 
-  getEncabezados(){
-    return this.httpClient.get<RespuestaEncabezados>('https://newsapi.org/v2/top-headlines?country=cl&category=business&apiKey=0d7a18a2a537410695898bec6311fd41')
+  getTopHeadLines(){
+    return this.httpclient.get<RespuestaToHeadLines>('https://newsapi.org/v2/everything?domains=wsj.com&apiKey=fc7d9914898440dbbd18848dcadd6851');
   }
 }

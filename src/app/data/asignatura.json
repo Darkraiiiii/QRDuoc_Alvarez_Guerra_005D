@@ -31,8 +31,8 @@
       "nombre": "Camila",
       "apellido": "Guerra",
       "usuario": "camguerra",
-      "contraseña": "1572",
-      "role": "estudiante",
+      "password": "1234",
+      "role": "Estudiante",
       "isactive": true
     },
     {
@@ -40,16 +40,16 @@
       "nombre": "Fabrizzio",
       "apellido": "Alvarez",
       "usuario": "fabralvarez",
-      "contraseña": "1704",
-      "role": "estudiante",
+      "password": "1704",
+      "role": "Estudiante",
       "isactive": true
     },
     {
       "nombre": "Mario",
       "apellido": "Contreras",
       "usuario": "marcontreras",
-      "contraseña": "1234",
-      "role": "estudiante",
+      "password": "1234",
+      "role": "Estudiante",
       "isactive": true,
       "id": 3
     },
@@ -57,8 +57,8 @@
       "nombre": "Amaro",
       "apellido": "Bueno",
       "usuario": "amabueno",
-      "contraseña": "123654",
-      "role": "estudiante",
+      "password": "123654",
+      "role": "Estudiante",
       "isactive": true,
       "id": 4
     },
@@ -66,10 +66,108 @@
       "nombre": "Kevin",
       "apellido": "Campillay",
       "usuario": "kevcampillay",
-      "contraseña": "147852",
-      "role": "estudiante",
+      "password": "147852",
+      "role": "Estudiante",
       "isactive": true,
       "id": 5
+    },
+    {
+      "id": 6,
+      "nombre": "momo",
+      "apellido": "gomez",
+      "usuario": "momgomez",
+      "password": "123456789",
+      "role": "Estudiante",
+      "isactive": true
+    },
+    {
+      "nombre": "Malandrin",
+      "apellido": "Bombin",
+      "usuario": "MalBombin",
+      "password": "12345678",
+      "asignatura1": "ProgMovil",
+      "asignatura2": "Calidad",
+      "role": "Profesor",
+      "isactive": true,
+      "id": 7
+    },
+    {
+      "id": 8,
+      "nombre": "Buen",
+      "apellido": "Bombin",
+      "usuario": "BuenBombin",
+      "password": "buenardo",
+      "asignatura1": "Bbd",
+      "asignatura2": "Arquitectura",
+      "role": "Profesor",
+      "isactive": true
+    },
+    {
+      "id": 9,
+      "nombre": "momo",
+      "apellido": "koko",
+      "usuario": "momkoko",
+      "password": "1234",
+      "asignatura1": "Bbd",
+      "asignatura2": "ProgMovil",
+      "role": "Profesor",
+      "isactive": true
+    }
+  ],
+  "QRcodes": [
+    {
+      "id": 1,
+      "nombre": "Camila",
+      "apellido": "Guerra",
+      "asignatura": "Calidad",
+      "fecha:": "2023-12-11"
+    },
+    {
+      "id": 2,
+      "nombre": "Camila",
+      "apellido": "Guerra",
+      "asignatura": "ProgMovil",
+      "fecha:": "2023-12-11"
+    },
+    {
+      "nombre": "Malandrin",
+      "apellido": "Bombin",
+      "asignatura": "ProgMovil",
+      "fecha": "2023-12-11",
+      "id": 3
+    },
+    {
+      "nombre": "Malandrin",
+      "apellido": "Bombin",
+      "asignatura": "Calidad",
+      "fecha": "2023-12-11",
+      "id": 4
+    },
+    {
+      "nombre": "momo",
+      "apellido": "koko",
+      "asignatura": "Bbd",
+      "fecha": "2023-12-11",
+      "id": 5
+    },
+    {
+      "nombre": "momo",
+      "apellido": "koko",
+      "asignatura": "ProgMovil",
+      "fecha": "2023-12-11",
+      "id": 6
+    },
+    {
+      "nombre": "Camila",
+      "apellido": "Guerra",
+      "fecha": "2023-12-12",
+      "id": 7
+    },
+    {
+      "nombre": "Camila",
+      "apellido": "Guerra",
+      "fecha": "2023-12-12",
+      "id": 8
     }
   ]
 }

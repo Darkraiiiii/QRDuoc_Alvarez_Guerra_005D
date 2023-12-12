@@ -26,11 +26,19 @@ export class AuthService {
   }
 
   BuscarUsuarioId(id:number):Observable<Users>{
-  return this.httpclient.get<Users>(`${environment.apiUrl}/usuario/id=${id}`)
+    return this.httpclient.get<Users>(`${environment.apiUrl}/usuarios/?id=${id}`);
   }
 
   ActualizarUsuario(usuario:any):Observable<Users>{
     return this.httpclient.put<Users>(`${environment.apiUrl}/usuarios/${usuario.id}`,usuario)
+  }
+
+  IsProfesor() {
+    return sessionStorage.getItem('role') == 'Profesor';
+  }
+
+  IsAlumno() {
+    return sessionStorage.getItem('role') == 'Estudiante';
   }
 }
 

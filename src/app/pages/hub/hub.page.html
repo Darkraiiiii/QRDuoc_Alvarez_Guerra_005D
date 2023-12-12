@@ -15,30 +15,21 @@
     
     <p style="text-align: center; color:palegreen; font-weight: bold; font-size: 15px;">Bienvenido {{nombre}}</p>
     
-    <ion-card style="background-color: rgb(255, 255, 255);">
-      Selecciona tu Asignatura para registrar tu asistencia
-    </ion-card>
-    <ion-list>
-      <ion-item>
-        <ion-label>Programacion de app Movil</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Modelamiento de Base de datos</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Gestion</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Estadistica</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>English</ion-label>
-      </ion-item>
+
+      <ion-button [routerLink]="['/perfil', numero]" expand="block" fill="solid" color="primary" shape="round">
+        Perfil
+        </ion-button>
+        <ion-button *ngIf="authservice.IsAlumno()" [routerLink]="['/qr']" expand="block" fill="block" fill="solid" color="primary" shape="round">
+          Escanear QR
+        </ion-button>
+        <ion-button *ngIf="authservice.IsProfesor()" [routerLink]="['/create-qr', numero]" expand="block" fill="solid" color="primary" shape="round">
+          Generar QR
+        </ion-button>
       <ion-button (click)="logout()" expand="block" fill="solid" shape="round">
         logout
       </ion-button> 
-    </ion-list>
   </ion-card-content>
+  
   <ion-header collapse="condense">
     
   </ion-header>

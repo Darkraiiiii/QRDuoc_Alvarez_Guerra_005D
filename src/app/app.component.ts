@@ -24,24 +24,9 @@ export class AppComponent {
       redirecTo: '/hub'
     },
     {
-      icon: 'person',
-      name: 'Perfil',
-      redirecTo: '/perfil'
-    },
-    {
       icon: 'scan',
       name: 'Escanear QR',
       redirecTo: '/qr'
-    },
-    {
-      icon: 'checkbox',
-      name: 'Asistencia',
-      redirecTo: '/asistencia'
-    },
-    {
-      icon: 'document',
-      name: 'Justificativo',
-      redirecTo: '/justificativo'
     },
     {
       icon: 'document',

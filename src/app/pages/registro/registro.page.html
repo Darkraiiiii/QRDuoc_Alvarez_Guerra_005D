@@ -28,7 +28,7 @@
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Usario:</ion-label>
+      <ion-label position="floating">Usuario:</ion-label>
     <ion-input type="text" placeholder="3 primeras letras del nombre y apellido completo" formControlName="usuario"></ion-input>
     </ion-item>
 
@@ -39,11 +39,31 @@
 
     <ion-item>
         <ion-label position="floating">Rol:</ion-label>
-        <ion-select formControlName="rol">
-          <ion-select-option value="estudiante">Estudiante</ion-select-option>
-          <ion-select-option value="profesor">Profesor</ion-select-option>
+        <ion-select formControlName="role">
+          <ion-select-option value="Estudiante">Estudiante</ion-select-option>
+          <ion-select-option value="Profesor">Profesor</ion-select-option>
         </ion-select>
     </ion-item>
+
+    <ion-item *ngIf="registroForm.get('role')?.value === 'Profesor'">
+            <ion-label position="floating">Asignatura 1: </ion-label>
+            <ion-select formControlName="asig1"  >
+              <ion-select-option value="Bbd">Programación de base de datos</ion-select-option>
+              <ion-select-option value="ProgMovil">Programación de aplicaciones moviles</ion-select-option>
+              <ion-select-option value="Arquitectura">Arquitectura de software</ion-select-option>
+              <ion-select-option value="Calidad">Calidad de software</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item *ngIf="registroForm.get('role')?.value === 'Profesor'">
+            <ion-label position="floating">Asignatura 2: </ion-label>
+            <ion-select formControlName="asig2"  >
+              <ion-select-option value="Bbd">Programación de base de datos</ion-select-option>
+              <ion-select-option value="ProgMovil">Programación de aplicaciones moviles</ion-select-option>
+              <ion-select-option value="Arquitectura">Arquitectura de software</ion-select-option>
+              <ion-select-option value="Calidad">Calidad de software</ion-select-option>
+            </ion-select>
+          </ion-item>
 
     <ion-button (click)="registrar()" expand="block" fill="solid" shape="round">
       Registrar Usuario

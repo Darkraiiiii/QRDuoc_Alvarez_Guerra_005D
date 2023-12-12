@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/servicio/auth.service';
 import { MenuController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 
@@ -11,13 +12,20 @@ import { AlertController } from '@ionic/angular';
 export class HubPage implements OnInit {
 nombre:any;
 
+numero : any;
+
   constructor(private menuController: MenuController,
               private router: Router,
-              private alertController: AlertController,) {
+              private alertController: AlertController,
+              public authservice: AuthService) {
                 this.nombre= sessionStorage.getItem('usuario');
               }
 
   ngOnInit() {
+  }
+
+  ionViewWillEnter(){
+    this.numero = sessionStorage.getItem('id');
   }
 
   MostrarMenu() {
@@ -26,6 +34,7 @@ nombre:any;
   logout() {
     sessionStorage.removeItem('usuario')
     sessionStorage.removeItem('role')
+    sessionStorage.removeItem('id')
     this.router.navigate(['login'])
   }
 
